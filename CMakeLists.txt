@@ -308,6 +308,12 @@ if(NOT MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mmsa")
     message(STATUS "Enabling MSA in tests/examples")
   endif()
+  
+  option(EIGEN_TEST_LSX "Enable/Disable LSX in tests/examples" OFF)
+  if(EIGEN_TEST_LSX)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mlsx")
+    message(STATUS "Enabling LSX in tests/examples")
+  endif()
 
   option(EIGEN_TEST_NEON "Enable/Disable Neon in tests/examples" OFF)
   if(EIGEN_TEST_NEON)
