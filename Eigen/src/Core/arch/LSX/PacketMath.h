@@ -149,20 +149,10 @@ struct packet_traits<int8_t> : default_packet_traits
     AlignedOnScalar = 1,
     size = 16,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasAbsDiff   = 0,
-    HasArg       = 0,
+
     HasAbs2      = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
+    HasCmp	 = 1,
     HasBlend     = 0
   };
 };
@@ -178,20 +168,10 @@ struct packet_traits<int16_t> : default_packet_traits
     AlignedOnScalar = 1,
     size = 8,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasAbsDiff   = 0,
-    HasArg       = 0,
     HasAbs2      = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
+    HasCmp	 = 1,
+    HasDiv	 = 1,
     HasBlend     = 0
   };
 };
@@ -207,20 +187,10 @@ struct packet_traits<int32_t> : default_packet_traits
     AlignedOnScalar = 1,
     size = 4,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasAbsDiff   = 0,
-    HasArg       = 0,
     HasAbs2      = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
+    HasCmp	 = 1,
+    HasDiv	 = 1,
     HasBlend     = 0
   };
 };
@@ -234,22 +204,12 @@ struct packet_traits<int64_t> : default_packet_traits
   {
     Vectorizable = 1,
     AlignedOnScalar = 1,
-    size = 16,
+    size = 2,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasAbsDiff   = 0,
-    HasArg       = 0,
     HasAbs2      = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
+    HasCmp	 = 1,
+    HasDiv	 = 1,
     HasBlend     = 0
   };
 };
@@ -265,23 +225,11 @@ struct packet_traits<uint8_t> : default_packet_traits
     AlignedOnScalar = 1,
     size = 16,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasAbsDiff   = 0,
-    HasArg       = 0,
     HasAbs2      = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
-    HasBlend     = 0,
-    
-    HasSqrt      = 0
+    HasNegate	 = 0,
+    HasCmp	 = 1,
+    HasBlend     = 0
   };
 };
 
@@ -296,23 +244,12 @@ struct packet_traits<uint16_t> : default_packet_traits
     AlignedOnScalar = 1,
     size = 8,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasAbsDiff   = 0,
-    HasArg       = 0,
     HasAbs2      = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
-    HasBlend     = 0,
-    
-    HasSqrt      = 0
+    HasNegate	 = 0,
+    HasCmp	 = 1,
+    HasDiv	 = 1,
+    HasBlend     = 0
   };
 };
 
@@ -327,23 +264,12 @@ struct packet_traits<uint32_t> : default_packet_traits
     AlignedOnScalar = 1,
     size = 4,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasAbsDiff   = 0,
-    HasArg       = 0,
     HasAbs2      = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
-    HasBlend     = 0,
-    
-    HasSqrt      = 0
+    HasNegate	 = 0,
+    HasCmp	 = 1,
+    HasDiv	 = 1,
+    HasBlend     = 0
   };
 };
 
@@ -358,23 +284,12 @@ struct packet_traits<uint64_t> : default_packet_traits
     AlignedOnScalar = 1,
     size = 2,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasAbsDiff   = 0,
-    HasArg       = 0,
     HasAbs2      = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
-    HasBlend     = 0,
-    
-    HasSqrt      = 0
+    HasNegate	 = 0,
+    HasCmp	 = 1,
+    HasDiv	 = 1,
+    HasBlend     = 0
   };
 };
 
@@ -389,40 +304,16 @@ struct packet_traits<float> : default_packet_traits
     AlignedOnScalar = 1,
     size = 4,
 
-    HasCmp       = 1,
-    HasAdd       = 1,
-    HasSub       = 1,
-    HasShift     = 1,
-    HasMul       = 1,
-    HasNegate    = 1,
-    HasAbs       = 1,
-    HasArg       = 0,
     HasAbs2      = 0,
-    HasAbsDiff   = 0,
-    HasMin       = 1,
-    HasMax       = 1,
-    HasConj      = 1,
     HasSetLinear = 0,
     HasBlend     = 0,
-    HasDiv   = 0,
-    HasFloor = 0,
-    HasCeil = 0,
-    HasRint = 0,
-
-    HasSin  = EIGEN_FAST_MATH,
-    HasCos  = EIGEN_FAST_MATH,
-    HasACos  = 0,
-    HasASin  = 0,
-    HasATan  = 0,
-    HasATanh = 0,
-    HasLog  = 0,
-    HasExp  = 0,
-    HasSqrt = 0,
-    HasRsqrt = 0,
-    HasTanh = EIGEN_FAST_MATH,
-    HasErf  = EIGEN_FAST_MATH,
-    HasBessel = 0,
-    HasNdtri = 0
+    HasSign      = 0,
+    HasDiv       = 1,
+    HasFloor     = 1,
+    HasCeil      = 1,
+    HasRound     = 1,
+    HasSqrt      = 1,
+    HasRsqrt     = 1
   };
 };
 
@@ -435,18 +326,15 @@ struct packet_traits<double> : default_packet_traits {
     AlignedOnScalar = 1,
     size=2,
 
-    HasCmp  = 1,
-    HasDiv  = 1,
-    HasLog  = 0,
-    HasExp  = 0,
-    HasSqrt = 0,
-    HasRsqrt = 0,
-    HasATan = 0,
-    HasBlend = 0,
-    HasFloor = 0,
-    HasCeil = 0,
-    HasRound = 0,
-    HasRint = 0
+    HasAbs2      = 0,
+    HasSetLinear = 0,
+    HasBlend     = 0,
+    HasSign      = 0,
+    HasDiv   = 1,
+    HasFloor = 1,
+    HasCeil = 1,
+    HasSqrt = 1,
+    HasRsqrt = 1
   };
 };
 
@@ -491,7 +379,7 @@ template<> struct unpacket_traits<Packet2l> {
   typedef Packet2l half;
   enum
   {
-    size = 4,
+    size = 2,
     alignment = Aligned16,
     vectorizable = true,
     masked_load_available = false,
@@ -595,42 +483,42 @@ template<> EIGEN_STRONG_INLINE Packet2d pset1frombits<Packet2d>(uint64_t from) {
 template<> EIGEN_STRONG_INLINE Packet16c plset<Packet16c>(const int8_t& a)
 {
   const int8_t countdown[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-  return __lsx_vsadd_b(pset1<Packet16c>(a), __lsx_vld(countdown, 0));
+  return __lsx_vadd_b(pset1<Packet16c>(a), __lsx_vld(countdown, 0));
 }
 template<> EIGEN_STRONG_INLINE Packet8s plset<Packet8s>(const int16_t& a)
 {
   const int16_t countdown[] = {0, 1, 2, 3, 4, 5, 6, 7};
-  return __lsx_vsadd_h(pset1<Packet8s>(a), __lsx_vld(countdown, 0));
+  return __lsx_vadd_h(pset1<Packet8s>(a), __lsx_vld(countdown, 0));
 }
 template<> EIGEN_STRONG_INLINE Packet4i plset<Packet4i>(const int32_t& a)
 {
   const int32_t countdown[] = {0, 1, 2, 3};
-  return __lsx_vsadd_w(pset1<Packet4i>(a), __lsx_vld(countdown, 0));
+  return __lsx_vadd_w(pset1<Packet4i>(a), __lsx_vld(countdown, 0));
 }
 template<> EIGEN_STRONG_INLINE Packet2l plset<Packet2l>(const int64_t& a)
 {
   const int64_t countdown[] = {0, 1};
-  return __lsx_vsadd_d(pset1<Packet2l>(a), __lsx_vld(countdown, 0));
+  return __lsx_vadd_d(pset1<Packet2l>(a), __lsx_vld(countdown, 0));
 }
 template<> EIGEN_STRONG_INLINE Packet16uc plset<Packet16uc>(const uint8_t& a)
 {
   const uint8_t countdown[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-  return __lsx_vsadd_bu(pset1<Packet16uc>(a), __lsx_vld(countdown, 0));
+  return __lsx_vadd_b(pset1<Packet16uc>(a), __lsx_vld(countdown, 0));
 }
 template<> EIGEN_STRONG_INLINE Packet8us plset<Packet8us>(const uint16_t& a)
 {
   const uint16_t countdown[] = {0, 1, 2, 3, 4, 5, 6, 7};
-  return __lsx_vsadd_hu(pset1<Packet8us>(a), __lsx_vld(countdown, 0));
+  return __lsx_vadd_h(pset1<Packet8us>(a), __lsx_vld(countdown, 0));
 }
 template<> EIGEN_STRONG_INLINE Packet4ui plset<Packet4ui>(const uint32_t& a)
 {
   const uint32_t countdown[] = {0, 1, 2, 3};
-  return __lsx_vsadd_wu(pset1<Packet4ui>(a), __lsx_vld(countdown, 0));
+  return __lsx_vadd_w(pset1<Packet4ui>(a), __lsx_vld(countdown, 0));
 }
 template<> EIGEN_STRONG_INLINE Packet2ul plset<Packet2ul>(const uint64_t& a)
 {
   const uint64_t countdown[] = {0, 1};
-  return __lsx_vsadd_du(pset1<Packet2ul>(a), __lsx_vld(countdown, 0));
+  return __lsx_vadd_d(pset1<Packet2ul>(a), __lsx_vld(countdown, 0));
 }
 template<> EIGEN_STRONG_INLINE Packet4f plset<Packet4f>(const float& a)
 {
@@ -643,25 +531,25 @@ template<> EIGEN_STRONG_INLINE Packet2d plset<Packet2d>(const double& a)
   return __lsx_vfadd_d(pset1<Packet2d>(a), countdown);
 }
 
-template<> EIGEN_STRONG_INLINE Packet16c padd<Packet16c>(const Packet16c& a, const Packet16c& b) { return __lsx_vsadd_b(a, b); }
-template<> EIGEN_STRONG_INLINE Packet8s padd<Packet8s>(const Packet8s& a, const Packet8s& b) { return __lsx_vsadd_h(a, b); }
-template<> EIGEN_STRONG_INLINE Packet4i padd<Packet4i>(const Packet4i& a, const Packet4i& b) { return __lsx_vsadd_w(a, b); }
-template<> EIGEN_STRONG_INLINE Packet2l padd<Packet2l>(const Packet2l& a, const Packet2l& b) { return __lsx_vsadd_d(a, b); }
-template<> EIGEN_STRONG_INLINE Packet16uc padd<Packet16uc>(const Packet16uc& a, const Packet16uc& b) { return __lsx_vsadd_bu(a, b); }
-template<> EIGEN_STRONG_INLINE Packet8us padd<Packet8us>(const Packet8us& a, const Packet8us& b) { return __lsx_vsadd_hu(a, b); }
-template<> EIGEN_STRONG_INLINE Packet4ui padd<Packet4ui>(const Packet4ui& a, const Packet4ui& b) { return __lsx_vsadd_wu(a, b); }
-template<> EIGEN_STRONG_INLINE Packet2ul padd<Packet2ul>(const Packet2ul& a, const Packet2ul& b) { return __lsx_vsadd_du(a, b); }
+template<> EIGEN_STRONG_INLINE Packet16c padd<Packet16c>(const Packet16c& a, const Packet16c& b) { return __lsx_vadd_b(a, b); }
+template<> EIGEN_STRONG_INLINE Packet8s padd<Packet8s>(const Packet8s& a, const Packet8s& b) { return __lsx_vadd_h(a, b); }
+template<> EIGEN_STRONG_INLINE Packet4i padd<Packet4i>(const Packet4i& a, const Packet4i& b) { return __lsx_vadd_w(a, b); }
+template<> EIGEN_STRONG_INLINE Packet2l padd<Packet2l>(const Packet2l& a, const Packet2l& b) { return __lsx_vadd_d(a, b); }
+template<> EIGEN_STRONG_INLINE Packet16uc padd<Packet16uc>(const Packet16uc& a, const Packet16uc& b) { return __lsx_vadd_b(a, b); }
+template<> EIGEN_STRONG_INLINE Packet8us padd<Packet8us>(const Packet8us& a, const Packet8us& b) { return __lsx_vadd_h(a, b); }
+template<> EIGEN_STRONG_INLINE Packet4ui padd<Packet4ui>(const Packet4ui& a, const Packet4ui& b) { return __lsx_vadd_w(a, b); }
+template<> EIGEN_STRONG_INLINE Packet2ul padd<Packet2ul>(const Packet2ul& a, const Packet2ul& b) { return __lsx_vadd_d(a, b); }
 template<> EIGEN_STRONG_INLINE Packet4f padd<Packet4f>(const Packet4f& a, const Packet4f& b) { return __lsx_vfadd_s(a, b); }
 template<> EIGEN_STRONG_INLINE Packet2d padd<Packet2d>(const Packet2d& a, const Packet2d& b) { return __lsx_vfadd_d(a, b); }
 
-template<> EIGEN_STRONG_INLINE Packet16c psub<Packet16c>(const Packet16c& a, const Packet16c& b) { return __lsx_vssub_b(a, b); }
-template<> EIGEN_STRONG_INLINE Packet8s psub<Packet8s>(const Packet8s& a, const Packet8s& b) { return __lsx_vssub_h(a, b); }
-template<> EIGEN_STRONG_INLINE Packet4i psub<Packet4i>(const Packet4i& a, const Packet4i& b) { return __lsx_vssub_w(a, b); }
-template<> EIGEN_STRONG_INLINE Packet2l psub<Packet2l>(const Packet2l& a, const Packet2l& b) { return __lsx_vssub_d(a, b); }
-template<> EIGEN_STRONG_INLINE Packet16uc psub<Packet16uc>(const Packet16uc& a, const Packet16uc& b) { return __lsx_vssub_bu(a, b); }
-template<> EIGEN_STRONG_INLINE Packet8us psub<Packet8us>(const Packet8us& a, const Packet8us& b) { return __lsx_vssub_hu(a, b); }
-template<> EIGEN_STRONG_INLINE Packet4ui psub<Packet4ui>(const Packet4ui& a, const Packet4ui& b) { return __lsx_vssub_wu(a, b); }
-template<> EIGEN_STRONG_INLINE Packet2ul psub<Packet2ul>(const Packet2ul& a, const Packet2ul& b) { return __lsx_vssub_du(a, b); }
+template<> EIGEN_STRONG_INLINE Packet16c psub<Packet16c>(const Packet16c& a, const Packet16c& b) { return __lsx_vsub_b(a, b); }
+template<> EIGEN_STRONG_INLINE Packet8s psub<Packet8s>(const Packet8s& a, const Packet8s& b) { return __lsx_vsub_h(a, b); }
+template<> EIGEN_STRONG_INLINE Packet4i psub<Packet4i>(const Packet4i& a, const Packet4i& b) { return __lsx_vsub_w(a, b); }
+template<> EIGEN_STRONG_INLINE Packet2l psub<Packet2l>(const Packet2l& a, const Packet2l& b) { return __lsx_vsub_d(a, b); }
+template<> EIGEN_STRONG_INLINE Packet16uc psub<Packet16uc>(const Packet16uc& a, const Packet16uc& b) { return __lsx_vsub_b(a, b); }
+template<> EIGEN_STRONG_INLINE Packet8us psub<Packet8us>(const Packet8us& a, const Packet8us& b) { return __lsx_vsub_h(a, b); }
+template<> EIGEN_STRONG_INLINE Packet4ui psub<Packet4ui>(const Packet4ui& a, const Packet4ui& b) { return __lsx_vsub_w(a, b); }
+template<> EIGEN_STRONG_INLINE Packet2ul psub<Packet2ul>(const Packet2ul& a, const Packet2ul& b) { return __lsx_vsub_d(a, b); }
 template<> EIGEN_STRONG_INLINE Packet4f psub<Packet4f>(const Packet4f& a, const Packet4f& b) { return __lsx_vfsub_s(a, b); }
 template<> EIGEN_STRONG_INLINE Packet2d psub<Packet2d>(const Packet2d& a, const Packet2d& b) { return __lsx_vfsub_d(a, b); }
 
@@ -677,8 +565,20 @@ template<> EIGEN_STRONG_INLINE Packet2d paddsub<Packet2d>(const Packet2d& a, con
 }
 
 
-template<> EIGEN_STRONG_INLINE Packet4f pnegate(const Packet4f& a) { return psub(make_packet4f(0.0f, 0.0f, 0.0f, 0.0f), a); }
-template<> EIGEN_STRONG_INLINE Packet2d pnegate(const Packet2d& a) { return psub(make_packet2d(0.0, 0.0), a); }
+template<> EIGEN_STRONG_INLINE Packet4f pnegate(const Packet4f& a)
+{
+  Packet4f mask = make_packet4f(numext::bit_cast<float>(0x80000000),
+		                numext::bit_cast<float>(0x80000000),
+				numext::bit_cast<float>(0x80000000),
+				numext::bit_cast<float>(0x80000000));
+  return (Packet4f)__lsx_vxor_v(numext::bit_cast<__m128i>(mask), numext::bit_cast<__m128i>(a));
+}
+template<> EIGEN_STRONG_INLINE Packet2d pnegate(const Packet2d& a)
+{
+  Packet2d mask = make_packet2d(numext::bit_cast<double>(0x8000000000000000),
+				numext::bit_cast<double>(0x8000000000000000));
+  return (Packet2d)__lsx_vxor_v(numext::bit_cast<__m128i>(mask), numext::bit_cast<__m128i>(a));
+}
 template<> EIGEN_STRONG_INLINE Packet16c pnegate(const Packet16c& a) { return __lsx_vneg_b(a); }
 template<> EIGEN_STRONG_INLINE Packet8s pnegate(const Packet8s& a) { return __lsx_vneg_h(a); }
 template<> EIGEN_STRONG_INLINE Packet4i pnegate(const Packet4i& a) { return __lsx_vneg_w(a); }
@@ -708,11 +608,9 @@ template<> EIGEN_STRONG_INLINE Packet2ul pmul<Packet2ul>(const Packet2ul& a, con
 
 template<> EIGEN_STRONG_INLINE Packet4f pdiv<Packet4f>(const Packet4f& a, const Packet4f& b) {return __lsx_vfdiv_s(a,b); }
 template<> EIGEN_STRONG_INLINE Packet2d pdiv<Packet2d>(const Packet2d& a, const Packet2d& b) {return __lsx_vfdiv_d(a,b); }
-template<> EIGEN_STRONG_INLINE Packet16c pdiv<Packet16c>(const Packet16c& a, const Packet16c& b) {return __lsx_vdiv_b(a,b); }
 template<> EIGEN_STRONG_INLINE Packet8s pdiv<Packet8s>(const Packet8s& a, const Packet8s& b) {return __lsx_vdiv_h(a,b); }
 template<> EIGEN_STRONG_INLINE Packet4i pdiv<Packet4i>(const Packet4i& a, const Packet4i& b) {return __lsx_vdiv_w(a,b); }
 template<> EIGEN_STRONG_INLINE Packet2l pdiv<Packet2l>(const Packet2l& a, const Packet2l& b) {return __lsx_vdiv_d(a,b); }
-template<> EIGEN_STRONG_INLINE Packet16uc pdiv<Packet16uc>(const Packet16uc& a, const Packet16uc& b) {return __lsx_vdiv_bu(a,b); }
 template<> EIGEN_STRONG_INLINE Packet8us pdiv<Packet8us>(const Packet8us& a, const Packet8us& b) {return __lsx_vdiv_hu(a,b); }
 template<> EIGEN_STRONG_INLINE Packet4ui pdiv<Packet4ui>(const Packet4ui& a, const Packet4ui& b) {return __lsx_vdiv_wu(a,b); }
 template<> EIGEN_STRONG_INLINE Packet2ul pdiv<Packet2ul>(const Packet2ul& a, const Packet2ul& b) {return __lsx_vdiv_du(a,b); }
@@ -723,10 +621,10 @@ template<> EIGEN_STRONG_INLINE Packet16c pmadd(const Packet16c& a, const Packet1
 template<> EIGEN_STRONG_INLINE Packet8s pmadd(const Packet8s& a, const Packet8s& b, const Packet8s& c) { return __lsx_vmadd_h(c, a, b); }
 template<> EIGEN_STRONG_INLINE Packet4i pmadd(const Packet4i& a, const Packet4i& b, const Packet4i& c) { return __lsx_vmadd_w(c, a, b); }
 template<> EIGEN_STRONG_INLINE Packet2l pmadd(const Packet2l& a, const Packet2l& b, const Packet2l& c) { return __lsx_vmadd_d(c, a, b); }
-template<> EIGEN_STRONG_INLINE Packet16uc pmadd(const Packet16uc& a, const Packet16uc& b, const Packet16uc& c) { return padd(pmul(a, b), c); }
-template<> EIGEN_STRONG_INLINE Packet8us pmadd(const Packet8us& a, const Packet8us& b, const Packet8us& c) { return padd(pmul(a, b), c); }
-template<> EIGEN_STRONG_INLINE Packet4ui pmadd(const Packet4ui& a, const Packet4ui& b, const Packet4ui& c) { return padd(pmul(a, b), c); }
-template<> EIGEN_STRONG_INLINE Packet2ul pmadd(const Packet2ul& a, const Packet2ul& b, const Packet2ul& c) { return padd(pmul(a, b), c); }
+template<> EIGEN_STRONG_INLINE Packet16uc pmadd(const Packet16uc& a, const Packet16uc& b, const Packet16uc& c) { return __lsx_vmadd_b(c, a, b); }
+template<> EIGEN_STRONG_INLINE Packet8us pmadd(const Packet8us& a, const Packet8us& b, const Packet8us& c) { return __lsx_vmadd_h(c, a, b); }
+template<> EIGEN_STRONG_INLINE Packet4ui pmadd(const Packet4ui& a, const Packet4ui& b, const Packet4ui& c) { return __lsx_vmadd_w(c, a, b); }
+template<> EIGEN_STRONG_INLINE Packet2ul pmadd(const Packet2ul& a, const Packet2ul& b, const Packet2ul& c) { return __lsx_vmadd_d(c, a, b); }
 
 template<> EIGEN_STRONG_INLINE Packet4f pand<Packet4f>(const Packet4f& a, const Packet4f& b) { return (Packet4f)__lsx_vand_v((__m128i)a, (__m128i)b); }
 template<> EIGEN_STRONG_INLINE Packet2d pand<Packet2d>(const Packet2d& a, const Packet2d& b) { return (Packet2d)__lsx_vand_v((__m128i)a, (__m128i)b); }
@@ -761,16 +659,16 @@ template<> EIGEN_STRONG_INLINE Packet8us pxor<Packet8us>(const Packet8us& a, con
 template<> EIGEN_STRONG_INLINE Packet4ui pxor<Packet4ui>(const Packet4ui& a, const Packet4ui& b) { return __lsx_vxor_v(a, b); }
 template<> EIGEN_STRONG_INLINE Packet2ul pxor<Packet2ul>(const Packet2ul& a, const Packet2ul& b) { return __lsx_vxor_v(a, b); }
 
-template<> EIGEN_STRONG_INLINE Packet4f pandnot<Packet4f>(const Packet4f& a, const Packet4f& b) { return (Packet4f)__lsx_vandn_v((__m128i)a, (__m128i)b); }
-template<> EIGEN_STRONG_INLINE Packet2d pandnot<Packet2d>(const Packet2d& a, const Packet2d& b) { return (Packet2d)__lsx_vandn_v((__m128i)a, (__m128i)b); }
-template<> EIGEN_STRONG_INLINE Packet16c pandnot<Packet16c>(const Packet16c& a, const Packet16c& b) { return __lsx_vandn_v(a, b); }
-template<> EIGEN_STRONG_INLINE Packet8s pandnot<Packet8s>(const Packet8s& a, const Packet8s& b) { return __lsx_vandn_v(a, b); }
-template<> EIGEN_STRONG_INLINE Packet4i pandnot<Packet4i>(const Packet4i& a, const Packet4i& b) { return __lsx_vandn_v(a, b); }
-template<> EIGEN_STRONG_INLINE Packet2l pandnot<Packet2l>(const Packet2l& a, const Packet2l& b) { return __lsx_vandn_v(a, b); }
-template<> EIGEN_STRONG_INLINE Packet16uc pandnot<Packet16uc>(const Packet16uc& a, const Packet16uc& b) { return __lsx_vandn_v(a, b); }
-template<> EIGEN_STRONG_INLINE Packet8us pandnot<Packet8us>(const Packet8us& a, const Packet8us& b) { return __lsx_vandn_v(a, b); }
-template<> EIGEN_STRONG_INLINE Packet4ui pandnot<Packet4ui>(const Packet4ui& a, const Packet4ui& b) { return __lsx_vandn_v(a, b); }
-template<> EIGEN_STRONG_INLINE Packet2ul pandnot<Packet2ul>(const Packet2ul& a, const Packet2ul& b) { return __lsx_vandn_v(a, b); }
+template<> EIGEN_STRONG_INLINE Packet4f pandnot<Packet4f>(const Packet4f& a, const Packet4f& b) { return (Packet4f)__lsx_vandn_v((__m128i)b, (__m128i)a); }
+template<> EIGEN_STRONG_INLINE Packet2d pandnot<Packet2d>(const Packet2d& a, const Packet2d& b) { return (Packet2d)__lsx_vandn_v((__m128i)b, (__m128i)a); }
+template<> EIGEN_STRONG_INLINE Packet16c pandnot<Packet16c>(const Packet16c& a, const Packet16c& b) { return __lsx_vandn_v(b, a); }
+template<> EIGEN_STRONG_INLINE Packet8s pandnot<Packet8s>(const Packet8s& a, const Packet8s& b) { return __lsx_vandn_v(b, a); }
+template<> EIGEN_STRONG_INLINE Packet4i pandnot<Packet4i>(const Packet4i& a, const Packet4i& b) { return __lsx_vandn_v(b, a); }
+template<> EIGEN_STRONG_INLINE Packet2l pandnot<Packet2l>(const Packet2l& a, const Packet2l& b) { return __lsx_vandn_v(b, a); }
+template<> EIGEN_STRONG_INLINE Packet16uc pandnot<Packet16uc>(const Packet16uc& a, const Packet16uc& b) { return __lsx_vandn_v(b, a); }
+template<> EIGEN_STRONG_INLINE Packet8us pandnot<Packet8us>(const Packet8us& a, const Packet8us& b) { return __lsx_vandn_v(b, a); }
+template<> EIGEN_STRONG_INLINE Packet4ui pandnot<Packet4ui>(const Packet4ui& a, const Packet4ui& b) { return __lsx_vandn_v(b, a); }
+template<> EIGEN_STRONG_INLINE Packet2ul pandnot<Packet2ul>(const Packet2ul& a, const Packet2ul& b) { return __lsx_vandn_v(b, a); }
 
 template<> EIGEN_STRONG_INLINE Packet4f pcmp_le<Packet4f>(const Packet4f& a, const Packet4f& b) { return (Packet4f)__lsx_vfcmp_cle_s(a, b); }
 template<> EIGEN_STRONG_INLINE Packet2d pcmp_le<Packet2d>(const Packet2d& a, const Packet2d& b) { return (Packet2d)__lsx_vfcmp_cle_d(a, b); }
@@ -827,40 +725,24 @@ template<> EIGEN_STRONG_INLINE Packet4ui pmax<Packet4ui>(const Packet4ui& a, con
 template<> EIGEN_STRONG_INLINE Packet2ul pmax<Packet2ul>(const Packet2ul& a, const Packet2ul& b) { return __lsx_vmax_du(a, b); }
 
 template<> EIGEN_STRONG_INLINE Packet4f pmin<Packet4f>(const Packet4f& a, const Packet4f& b) {
-#if EIGEN_FAST_MATH
-  return __lsx_vfmin_s(a, b);
-#else
   Packet4i aNaN = __lsx_vfcmp_cun_s(a, a);
-  Packet4i aMinOrNaN = por(__lsx_vfcmp_clt_s(a, b), aNaN);
-  return (Packet4f)__lsx_vbitsel_v(b, a, aMinOrNaN);
-#endif
+  Packet4i aMinOrNaN = por<Packet4i>(__lsx_vfcmp_clt_s(a, b), aNaN);
+  return (Packet4f)__lsx_vbitsel_v((__m128i)b, (__m128i)a, aMinOrNaN);
 }
 template<> EIGEN_STRONG_INLINE Packet2d pmin<Packet2d>(const Packet2d& a, const Packet2d& b) {
-#if EIGEN_FAST_MATH
-  return __lsx_vfmin_d(a, b);
-#else
   Packet2l aNaN = __lsx_vfcmp_cun_d(a, a);
-  Packet2l aMinOrNaN = por(__lsx_vfcmp_clt_d(a, b), aNaN);
-  return (Packet2d)__lsx_vbitsel_v(b, a, aMinOrNaN);
-#endif
+  Packet2l aMinOrNaN = por<Packet2l>(__lsx_vfcmp_clt_d(a, b), aNaN);
+  return (Packet2d)__lsx_vbitsel_v((__m128i)b, (__m128i)a, aMinOrNaN);
 }
 template<> EIGEN_STRONG_INLINE Packet4f pmax<Packet4f>(const Packet4f& a, const Packet4f& b) {
-#if EIGEN_FAST_MATH
-  return __lsx_vfmax_s(a, b);
-#else
   Packet4i aNaN = __lsx_vfcmp_cun_s(a, a);
-  Packet4i aMaxOrNaN = por(__lsx_vfcmp_clt_s(b, a), aNaN);
-  return (Packet4f)__lsx_vbitsel_v(b, a, aMaxOrNaN);
-#endif
+  Packet4i aMaxOrNaN = por<Packet4i>(__lsx_vfcmp_clt_s(b, a), aNaN);
+  return (Packet4f)__lsx_vbitsel_v((__m128i)b, (__m128i)a, aMaxOrNaN);
 }
 template<> EIGEN_STRONG_INLINE Packet2d pmax<Packet2d>(const Packet2d& a, const Packet2d& b) {
-#if EIGEN_FAST_MATH
-  return __lsx_vfmax_d(a, b);
-#else
-  Packet2l aNaN = __lsx_vfcmp_cun_s(a, a);
-  Packet2l aMaxOrNaN = por(__lsx_vfcmp_clt_s(b, a), aNaN);
-  return (Packet2d)__lsx_vbitsel_v(b, a, aMaxOrNaN);
-#endif
+  Packet2l aNaN = __lsx_vfcmp_cun_d(a, a);
+  Packet2l aMaxOrNaN = por<Packet2l>(__lsx_vfcmp_clt_d(b, a), aNaN);
+  return (Packet2d)__lsx_vbitsel_v((__m128i)b, (__m128i)a, aMaxOrNaN);
 }
 
 template<int N> EIGEN_STRONG_INLINE Packet16c parithmetic_shift_right(const Packet16c& a) { return __lsx_vsrai_b(a, N); }
@@ -1118,144 +1000,91 @@ EIGEN_DEVICE_FUNC inline void pscatter<double, Packet2d>(double* to, const Packe
   to += stride;
   *to = from[1];
 }
-/*
 template<>
 EIGEN_DEVICE_FUNC inline void pscatter<int8_t, Packet16c>(int8_t* to, const Packet16c& from, Index stride) {
-  *to = from[0];
-  to += stride;
-  *to = from[1];
-  to += stride;
-  *to = from[2];
-  to += stride;
-  *to = from[3];
-  to += stride;
-  *to = from[4];
-  to += stride;
-  *to = from[5];
-  to += stride;
-  *to = from[6];
-  to += stride;
-  *to = from[7];
-  to += stride;
-  *to = from[8];
-  to += stride;
-  *to = from[9];
-  to += stride;
-  *to = from[10];
-  to += stride;
-  *to = from[11];
-  to += stride;
-  *to = from[12];
-  to += stride;
-  *to = from[13];
-  to += stride;
-  *to = from[14];
-  to += stride;
-  *to = from[15];
+  to[stride*0] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 0);
+  to[stride*1] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 1);
+  to[stride*2] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 2);
+  to[stride*3] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 3);
+  to[stride*4] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 4);
+  to[stride*5] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 5);
+  to[stride*6] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 6);
+  to[stride*7] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 7);
+  to[stride*8] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 8);
+  to[stride*9] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 9);
+  to[stride*10] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 10);
+  to[stride*11] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 11);
+  to[stride*12] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 12);
+  to[stride*13] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 13);
+  to[stride*14] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 14);
+  to[stride*15] = (int8_t)__lsx_vpickve2gr_b((__m128i)from, 15);
 }
 template<>
 EIGEN_DEVICE_FUNC inline void pscatter<int16_t, Packet8s>(int16_t* to, const Packet8s& from, Index stride) {
-  *to = from[0];
-  to += stride;
-  *to = from[1];
-  to += stride;
-  *to = from[2];
-  to += stride;
-  *to = from[3];
-  to += stride;
-  *to = from[4];
-  to += stride;
-  *to = from[5];
-  to += stride;
-  *to = from[6];
-  to += stride;
-  *to = from[7];
+  to[stride*0] = (int16_t)__lsx_vpickve2gr_h((__m128i)from, 0);
+  to[stride*1] = (int16_t)__lsx_vpickve2gr_h((__m128i)from, 1);
+  to[stride*2] = (int16_t)__lsx_vpickve2gr_h((__m128i)from, 2);
+  to[stride*3] = (int16_t)__lsx_vpickve2gr_h((__m128i)from, 3);
+  to[stride*4] = (int16_t)__lsx_vpickve2gr_h((__m128i)from, 4);
+  to[stride*5] = (int16_t)__lsx_vpickve2gr_h((__m128i)from, 5);
+  to[stride*6] = (int16_t)__lsx_vpickve2gr_h((__m128i)from, 6);
+  to[stride*7] = (int16_t)__lsx_vpickve2gr_h((__m128i)from, 7);
 }
 template<>
 EIGEN_DEVICE_FUNC inline void pscatter<int32_t, Packet4i>(int32_t* to, const Packet4i& from, Index stride) {
-  *to = from[0];
-  to += stride;
-  *to = from[1];
-  to += stride;
-  *to = from[2];
-  to += stride;
-  *to = from[3];
+  to[stride*0] = (int32_t)__lsx_vpickve2gr_w((__m128i)from, 0);
+  to[stride*1] = (int32_t)__lsx_vpickve2gr_w((__m128i)from, 1);
+  to[stride*2] = (int32_t)__lsx_vpickve2gr_w((__m128i)from, 2);
+  to[stride*3] = (int32_t)__lsx_vpickve2gr_w((__m128i)from, 3);
 }
 template<>
 EIGEN_DEVICE_FUNC inline void pscatter<int64_t, Packet2l>(int64_t* to, const Packet2l& from, Index stride) {
-  *to = from[0];
-  to += stride;
-  *to = from[1];
+  to[stride*0] = (int64_t)__lsx_vpickve2gr_d((__m128i)from, 0);
+  to[stride*1] = (int64_t)__lsx_vpickve2gr_d((__m128i)from, 1);
 }
 template<>
 EIGEN_DEVICE_FUNC inline void pscatter<uint8_t, Packet16uc>(uint8_t* to, const Packet16uc& from, Index stride) {
-  *to = from[0];
-  to += stride;
-  *to = from[1];
-  to += stride;
-  *to = from[2];
-  to += stride;
-  *to = from[3];
-  to += stride;
-  *to = from[4];
-  to += stride;
-  *to = from[5];
-  to += stride;
-  *to = from[6];
-  to += stride;
-  *to = from[7];
-  to += stride;
-  *to = from[8];
-  to += stride;
-  *to = from[9];
-  to += stride;
-  *to = from[10];
-  to += stride;
-  *to = from[11];
-  to += stride;
-  *to = from[12];
-  to += stride;
-  *to = from[13];
-  to += stride;
-  *to = from[14];
-  to += stride;
-  *to = from[15];
+  to[stride*0] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 0);
+  to[stride*1] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 1);
+  to[stride*2] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 2);
+  to[stride*3] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 3);
+  to[stride*4] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 4);
+  to[stride*5] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 5);
+  to[stride*6] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 6);
+  to[stride*7] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 7);
+  to[stride*8] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 8);
+  to[stride*9] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 9);
+  to[stride*10] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 10);
+  to[stride*11] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 11);
+  to[stride*12] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 12);
+  to[stride*13] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 13);
+  to[stride*14] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 14);
+  to[stride*15] = (uint8_t)__lsx_vpickve2gr_b((__m128i)from, 15);
 }
 template<>
 EIGEN_DEVICE_FUNC inline void pscatter<uint16_t, Packet8us>(uint16_t* to, const Packet8us& from, Index stride) {
-  *to = from[0];
-  to += stride;
-  *to = from[1];
-  to += stride;
-  *to = from[2];
-  to += stride;
-  *to = from[3];
-  to += stride;
-  *to = from[4];
-  to += stride;
-  *to = from[5];
-  to += stride;
-  *to = from[6];
-  to += stride;
-  *to = from[7];
+  to[stride*0] = (uint16_t)__lsx_vpickve2gr_h((__m128i)from, 0);
+  to[stride*1] = (uint16_t)__lsx_vpickve2gr_h((__m128i)from, 1);
+  to[stride*2] = (uint16_t)__lsx_vpickve2gr_h((__m128i)from, 2);
+  to[stride*3] = (uint16_t)__lsx_vpickve2gr_h((__m128i)from, 3);
+  to[stride*4] = (uint16_t)__lsx_vpickve2gr_h((__m128i)from, 4);
+  to[stride*5] = (uint16_t)__lsx_vpickve2gr_h((__m128i)from, 5);
+  to[stride*6] = (uint16_t)__lsx_vpickve2gr_h((__m128i)from, 6);
+  to[stride*7] = (uint16_t)__lsx_vpickve2gr_h((__m128i)from, 7);
 }
 template<>
 EIGEN_DEVICE_FUNC inline void pscatter<uint32_t, Packet4ui>(uint32_t* to, const Packet4ui& from, Index stride) {
-  *to = from[0];
-  to += stride;
-  *to = from[1];
-  to += stride;
-  *to = from[2];
-  to += stride;
-  *to = from[3];
+  to[stride*0] = (uint32_t)__lsx_vpickve2gr_w((__m128i)from, 0);
+  to[stride*1] = (uint32_t)__lsx_vpickve2gr_w((__m128i)from, 1);
+  to[stride*2] = (uint32_t)__lsx_vpickve2gr_w((__m128i)from, 2);
+  to[stride*3] = (uint32_t)__lsx_vpickve2gr_w((__m128i)from, 3);
 }
 template<>
 EIGEN_DEVICE_FUNC inline void pscatter<uint64_t, Packet2ul>(uint64_t* to, const Packet2ul& from, Index stride) {
-  *to = from[0];
-  to += stride;
-  *to = from[1];
+  to[stride*0] = (uint64_t)__lsx_vpickve2gr_d((__m128i)from, 0);
+  to[stride*1] = (uint64_t)__lsx_vpickve2gr_d((__m128i)from, 1);
 }
-*/
+
 template<> EIGEN_STRONG_INLINE void prefetch<float>(const float* addr) { __builtin_prefetch(addr); }
 template<> EIGEN_STRONG_INLINE void prefetch<double>(const double* addr) { __builtin_prefetch(addr); }
 template<> EIGEN_STRONG_INLINE void prefetch<int8_t>(const int8_t* addr) { __builtin_prefetch(addr); }
@@ -1519,360 +1348,360 @@ template<> EIGEN_STRONG_INLINE Packet2d psqrt(const Packet2d& a) { return __lsx_
 
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet4f, 4>& kernel)
 {
-  Packet4f T0 = (Packet4f)__lsx_vilvl_w((__m128i)kernel.packet[0], (__m128i)kernel.packet[1]);
-  Packet4f T1 = (Packet4f)__lsx_vilvl_w((__m128i)kernel.packet[2], (__m128i)kernel.packet[3]);
-  Packet4f T2 = (Packet4f)__lsx_vilvh_w((__m128i)kernel.packet[2], (__m128i)kernel.packet[3]);
-  Packet4f T3 = (Packet4f)__lsx_vilvh_w((__m128i)kernel.packet[2], (__m128i)kernel.packet[3]);
+  Packet4f T0 = (Packet4f)__lsx_vilvl_w((__m128i)kernel.packet[1], (__m128i)kernel.packet[0]);
+  Packet4f T1 = (Packet4f)__lsx_vilvh_w((__m128i)kernel.packet[1], (__m128i)kernel.packet[0]);
+  Packet4f T2 = (Packet4f)__lsx_vilvl_w((__m128i)kernel.packet[3], (__m128i)kernel.packet[2]);
+  Packet4f T3 = (Packet4f)__lsx_vilvh_w((__m128i)kernel.packet[3], (__m128i)kernel.packet[2]);
 
-  kernel.packet[0] = (Packet4f)__lsx_vilvl_d((__m128i)T0, (__m128i)T1);
-  kernel.packet[1] = (Packet4f)__lsx_vilvh_d((__m128i)T0, (__m128i)T1);
-  kernel.packet[2] = (Packet4f)__lsx_vilvl_d((__m128i)T2, (__m128i)T3);
-  kernel.packet[3] = (Packet4f)__lsx_vilvh_d((__m128i)T2, (__m128i)T3);
+  kernel.packet[0] = (Packet4f)__lsx_vilvl_d((__m128i)T2, (__m128i)T0);
+  kernel.packet[1] = (Packet4f)__lsx_vilvh_d((__m128i)T2, (__m128i)T0);
+  kernel.packet[2] = (Packet4f)__lsx_vilvl_d((__m128i)T3, (__m128i)T1);
+  kernel.packet[3] = (Packet4f)__lsx_vilvh_d((__m128i)T3, (__m128i)T1);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet2d, 2>& kernel)
 {
-  Packet2d tmp = (Packet2d)__lsx_vilvh_d((__m128i)kernel.packet[0], (__m128i)kernel.packet[1]);
-  kernel.packet[0] = (Packet2d)__lsx_vilvl_d((__m128i)kernel.packet[0], (__m128i)kernel.packet[1]);
+  Packet2d tmp = (Packet2d)__lsx_vilvh_d((__m128i)kernel.packet[1], (__m128i)kernel.packet[0]);
+  kernel.packet[0] = (Packet2d)__lsx_vilvl_d((__m128i)kernel.packet[1], (__m128i)kernel.packet[0]);
   kernel.packet[1] = tmp;
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet16c, 16>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t4 = __lsx_vilvl_b(kernel.packet[4], kernel.packet[5]);
-  __m128i t5 = __lsx_vilvh_b(kernel.packet[4], kernel.packet[5]);
-  __m128i t6 = __lsx_vilvl_b(kernel.packet[6], kernel.packet[7]);
-  __m128i t7 = __lsx_vilvh_b(kernel.packet[6], kernel.packet[7]);
-  __m128i t8 = __lsx_vilvl_b(kernel.packet[8], kernel.packet[9]);
-  __m128i t9 = __lsx_vilvh_b(kernel.packet[8], kernel.packet[9]);
-  __m128i ta = __lsx_vilvl_b(kernel.packet[10], kernel.packet[11]);
-  __m128i tb = __lsx_vilvh_b(kernel.packet[10], kernel.packet[11]);
-  __m128i tc = __lsx_vilvl_b(kernel.packet[12], kernel.packet[13]);
-  __m128i td = __lsx_vilvh_b(kernel.packet[12], kernel.packet[13]);
-  __m128i te = __lsx_vilvl_b(kernel.packet[14], kernel.packet[15]);
-  __m128i tf = __lsx_vilvh_b(kernel.packet[14], kernel.packet[15]);
+  __m128i t0 = __lsx_vilvl_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t4 = __lsx_vilvl_b(kernel.packet[5], kernel.packet[4]);
+  __m128i t5 = __lsx_vilvh_b(kernel.packet[5], kernel.packet[4]);
+  __m128i t6 = __lsx_vilvl_b(kernel.packet[7], kernel.packet[6]);
+  __m128i t7 = __lsx_vilvh_b(kernel.packet[7], kernel.packet[6]);
+  __m128i t8 = __lsx_vilvl_b(kernel.packet[9], kernel.packet[8]);
+  __m128i t9 = __lsx_vilvh_b(kernel.packet[9], kernel.packet[8]);
+  __m128i ta = __lsx_vilvl_b(kernel.packet[11], kernel.packet[10]);
+  __m128i tb = __lsx_vilvh_b(kernel.packet[11], kernel.packet[10]);
+  __m128i tc = __lsx_vilvl_b(kernel.packet[13], kernel.packet[12]);
+  __m128i td = __lsx_vilvh_b(kernel.packet[13], kernel.packet[12]);
+  __m128i te = __lsx_vilvl_b(kernel.packet[15], kernel.packet[14]);
+  __m128i tf = __lsx_vilvh_b(kernel.packet[15], kernel.packet[14]);
 
-  __m128i s0 = __lsx_vilvl_h(t0, t2);
-  __m128i s1 = __lsx_vilvh_h(t0, t2);
-  __m128i s2 = __lsx_vilvl_h(t1, t3);
-  __m128i s3 = __lsx_vilvh_h(t1, t3);
-  __m128i s4 = __lsx_vilvl_h(t4, t6);
-  __m128i s5 = __lsx_vilvh_h(t4, t6);
-  __m128i s6 = __lsx_vilvl_h(t5, t7);
-  __m128i s7 = __lsx_vilvh_h(t5, t7);
-  __m128i s8 = __lsx_vilvl_h(t8, ta);
-  __m128i s9 = __lsx_vilvh_h(t8, ta);
-  __m128i sa = __lsx_vilvl_h(t9, tb);
-  __m128i sb = __lsx_vilvh_h(t9, tb);
-  __m128i sc = __lsx_vilvl_h(tc, te);
-  __m128i sd = __lsx_vilvh_h(tc, te);
-  __m128i se = __lsx_vilvl_h(td, tf);
-  __m128i sf = __lsx_vilvh_h(td, tf);
+  __m128i s0 = __lsx_vilvl_h(t2, t0);
+  __m128i s1 = __lsx_vilvh_h(t2, t0);
+  __m128i s2 = __lsx_vilvl_h(t3, t1);
+  __m128i s3 = __lsx_vilvh_h(t3, t1);
+  __m128i s4 = __lsx_vilvl_h(t6, t4);
+  __m128i s5 = __lsx_vilvh_h(t6, t4);
+  __m128i s6 = __lsx_vilvl_h(t7, t5);
+  __m128i s7 = __lsx_vilvh_h(t7, t5);
+  __m128i s8 = __lsx_vilvl_h(ta, t8);
+  __m128i s9 = __lsx_vilvh_h(ta, t8);
+  __m128i sa = __lsx_vilvl_h(tb, t9);
+  __m128i sb = __lsx_vilvh_h(tb, t9);
+  __m128i sc = __lsx_vilvl_h(te, tc);
+  __m128i sd = __lsx_vilvh_h(te, tc);
+  __m128i se = __lsx_vilvl_h(tf, td);
+  __m128i sf = __lsx_vilvh_h(tf, td);
 
-  __m128i u0 = __lsx_vilvl_w(s0, s4);
-  __m128i u1 = __lsx_vilvh_w(s0, s4);
-  __m128i u2 = __lsx_vilvl_w(s1, s5);
-  __m128i u3 = __lsx_vilvh_w(s1, s5);
-  __m128i u4 = __lsx_vilvl_w(s2, s6);
-  __m128i u5 = __lsx_vilvh_w(s2, s6);
-  __m128i u6 = __lsx_vilvl_w(s3, s7);
-  __m128i u7 = __lsx_vilvh_w(s3, s7);
-  __m128i u8 = __lsx_vilvl_w(s8, sc);
-  __m128i u9 = __lsx_vilvh_w(s8, sc);
-  __m128i ua = __lsx_vilvl_w(s9, sd);
-  __m128i ub = __lsx_vilvh_w(s9, sd);
-  __m128i uc = __lsx_vilvl_w(sa, se);
-  __m128i ud = __lsx_vilvh_w(sa, se);
-  __m128i ue = __lsx_vilvl_w(sb, sf);
-  __m128i uf = __lsx_vilvh_w(sb, sf);
+  __m128i u0 = __lsx_vilvl_w(s4, s0);
+  __m128i u1 = __lsx_vilvh_w(s4, s0);
+  __m128i u2 = __lsx_vilvl_w(s5, s1);
+  __m128i u3 = __lsx_vilvh_w(s5, s1);
+  __m128i u4 = __lsx_vilvl_w(s6, s2);
+  __m128i u5 = __lsx_vilvh_w(s6, s2);
+  __m128i u6 = __lsx_vilvl_w(s7, s3);
+  __m128i u7 = __lsx_vilvh_w(s7, s3);
+  __m128i u8 = __lsx_vilvl_w(sc, s8);
+  __m128i u9 = __lsx_vilvh_w(sc, s8);
+  __m128i ua = __lsx_vilvl_w(sd, s9);
+  __m128i ub = __lsx_vilvh_w(sd, s9);
+  __m128i uc = __lsx_vilvl_w(se, sa);
+  __m128i ud = __lsx_vilvh_w(se, sa);
+  __m128i ue = __lsx_vilvl_w(sf, sb);
+  __m128i uf = __lsx_vilvh_w(sf, sb);
 
-  kernel.packet[0] = __lsx_vilvl_d(u0, u8);
-  kernel.packet[1] = __lsx_vilvh_d(u0, u8);
-  kernel.packet[2] = __lsx_vilvl_d(u1, u9);
-  kernel.packet[3] = __lsx_vilvh_d(u1, u9);
-  kernel.packet[4] = __lsx_vilvl_d(u2, ua);
-  kernel.packet[5] = __lsx_vilvh_d(u2, ua);
-  kernel.packet[6] = __lsx_vilvl_d(u3, ub);
-  kernel.packet[7] = __lsx_vilvh_d(u3, ub);
-  kernel.packet[8] = __lsx_vilvl_d(u4, uc);
-  kernel.packet[9] = __lsx_vilvh_d(u4, uc);
-  kernel.packet[10] = __lsx_vilvl_d(u5, ud);
-  kernel.packet[11] = __lsx_vilvh_d(u5, ud);
-  kernel.packet[12] = __lsx_vilvl_d(u6, ue);
-  kernel.packet[13] = __lsx_vilvh_d(u6, ue);
-  kernel.packet[14] = __lsx_vilvl_d(u7, uf);
-  kernel.packet[15] = __lsx_vilvh_d(u7, uf);
+  kernel.packet[0] = __lsx_vilvl_d(u8, u0);
+  kernel.packet[1] = __lsx_vilvh_d(u8, u0);
+  kernel.packet[2] = __lsx_vilvl_d(u9, u1);
+  kernel.packet[3] = __lsx_vilvh_d(u9, u1);
+  kernel.packet[4] = __lsx_vilvl_d(ua, u2);
+  kernel.packet[5] = __lsx_vilvh_d(ua, u2);
+  kernel.packet[6] = __lsx_vilvl_d(ub, u3);
+  kernel.packet[7] = __lsx_vilvh_d(ub, u3);
+  kernel.packet[8] = __lsx_vilvl_d(uc, u4);
+  kernel.packet[9] = __lsx_vilvh_d(uc, u4);
+  kernel.packet[10] = __lsx_vilvl_d(ud, u5);
+  kernel.packet[11] = __lsx_vilvh_d(ud, u5);
+  kernel.packet[12] = __lsx_vilvl_d(ue, u6);
+  kernel.packet[13] = __lsx_vilvh_d(ue, u6);
+  kernel.packet[14] = __lsx_vilvl_d(uf, u7);
+  kernel.packet[15] = __lsx_vilvh_d(uf, u7);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet16c, 8>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t4 = __lsx_vilvl_b(kernel.packet[4], kernel.packet[5]);
-  __m128i t5 = __lsx_vilvh_b(kernel.packet[4], kernel.packet[5]);
-  __m128i t6 = __lsx_vilvl_b(kernel.packet[6], kernel.packet[7]);
-  __m128i t7 = __lsx_vilvh_b(kernel.packet[6], kernel.packet[7]);
+  __m128i t0 = __lsx_vilvl_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t4 = __lsx_vilvl_b(kernel.packet[5], kernel.packet[4]);
+  __m128i t5 = __lsx_vilvh_b(kernel.packet[5], kernel.packet[4]);
+  __m128i t6 = __lsx_vilvl_b(kernel.packet[7], kernel.packet[6]);
+  __m128i t7 = __lsx_vilvh_b(kernel.packet[7], kernel.packet[6]);
   
-  __m128i s0 = __lsx_vilvl_h(t0, t2);
-  __m128i s1 = __lsx_vilvh_h(t0, t2);
-  __m128i s2 = __lsx_vilvl_h(t1, t3);
-  __m128i s3 = __lsx_vilvh_h(t1, t3);
-  __m128i s4 = __lsx_vilvl_h(t4, t6);
-  __m128i s5 = __lsx_vilvh_h(t4, t6);
-  __m128i s6 = __lsx_vilvl_h(t5, t7);
-  __m128i s7 = __lsx_vilvh_h(t5, t7);
+  __m128i s0 = __lsx_vilvl_h(t2, t0);
+  __m128i s1 = __lsx_vilvh_h(t2, t0);
+  __m128i s2 = __lsx_vilvl_h(t3, t1);
+  __m128i s3 = __lsx_vilvh_h(t3, t1);
+  __m128i s4 = __lsx_vilvl_h(t6, t4);
+  __m128i s5 = __lsx_vilvh_h(t6, t4);
+  __m128i s6 = __lsx_vilvl_h(t7, t5);
+  __m128i s7 = __lsx_vilvh_h(t7, t5);
   
-  kernel.packet[0] = __lsx_vilvl_w(s0, s4);
-  kernel.packet[1] = __lsx_vilvh_w(s0, s4);
-  kernel.packet[2] = __lsx_vilvl_w(s1, s5);
-  kernel.packet[3] = __lsx_vilvh_w(s1, s5);
-  kernel.packet[4] = __lsx_vilvl_w(s2, s6);
-  kernel.packet[5] = __lsx_vilvh_w(s2, s6);
-  kernel.packet[6] = __lsx_vilvl_w(s3, s7);
-  kernel.packet[7] = __lsx_vilvh_w(s3, s7);
+  kernel.packet[0] = __lsx_vilvl_w(s4, s0);
+  kernel.packet[1] = __lsx_vilvh_w(s4, s0);
+  kernel.packet[2] = __lsx_vilvl_w(s5, s1);
+  kernel.packet[3] = __lsx_vilvh_w(s5, s1);
+  kernel.packet[4] = __lsx_vilvl_w(s6, s2);
+  kernel.packet[5] = __lsx_vilvh_w(s6, s2);
+  kernel.packet[6] = __lsx_vilvl_w(s7, s3);
+  kernel.packet[7] = __lsx_vilvh_w(s7, s3);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet16c, 4>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_b(kernel.packet[2], kernel.packet[3]);
+  __m128i t0 = __lsx_vilvl_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_b(kernel.packet[3], kernel.packet[2]);
   
-  kernel.packet[0] = __lsx_vilvl_h(t0, t2);
-  kernel.packet[1] = __lsx_vilvh_h(t0, t2);
-  kernel.packet[2] = __lsx_vilvl_h(t1, t3);
-  kernel.packet[3] = __lsx_vilvh_h(t1, t3);
+  kernel.packet[0] = __lsx_vilvl_h(t2, t0);
+  kernel.packet[1] = __lsx_vilvh_h(t2, t0);
+  kernel.packet[2] = __lsx_vilvl_h(t3, t1);
+  kernel.packet[3] = __lsx_vilvh_h(t3, t1);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet8s, 8>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_h(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_h(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_h(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_h(kernel.packet[2], kernel.packet[3]);
-  __m128i t4 = __lsx_vilvl_h(kernel.packet[4], kernel.packet[5]);
-  __m128i t5 = __lsx_vilvh_h(kernel.packet[4], kernel.packet[5]);
-  __m128i t6 = __lsx_vilvl_h(kernel.packet[6], kernel.packet[7]);
-  __m128i t7 = __lsx_vilvh_h(kernel.packet[6], kernel.packet[7]);
+  __m128i t0 = __lsx_vilvl_h(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_h(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_h(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_h(kernel.packet[3], kernel.packet[2]);
+  __m128i t4 = __lsx_vilvl_h(kernel.packet[5], kernel.packet[4]);
+  __m128i t5 = __lsx_vilvh_h(kernel.packet[5], kernel.packet[4]);
+  __m128i t6 = __lsx_vilvl_h(kernel.packet[7], kernel.packet[6]);
+  __m128i t7 = __lsx_vilvh_h(kernel.packet[7], kernel.packet[6]);
 
-  __m128i s0 = __lsx_vilvl_w(t0, t2);
-  __m128i s1 = __lsx_vilvh_w(t0, t2);
-  __m128i s2 = __lsx_vilvl_w(t1, t3);
-  __m128i s3 = __lsx_vilvh_w(t1, t3);
-  __m128i s4 = __lsx_vilvl_w(t4, t6);
-  __m128i s5 = __lsx_vilvh_w(t4, t6);
-  __m128i s6 = __lsx_vilvl_w(t5, t7);
-  __m128i s7 = __lsx_vilvh_w(t5, t7);
+  __m128i s0 = __lsx_vilvl_w(t2, t0);
+  __m128i s1 = __lsx_vilvh_w(t2, t0);
+  __m128i s2 = __lsx_vilvl_w(t3, t1);
+  __m128i s3 = __lsx_vilvh_w(t3, t1);
+  __m128i s4 = __lsx_vilvl_w(t6, t4);
+  __m128i s5 = __lsx_vilvh_w(t6, t4);
+  __m128i s6 = __lsx_vilvl_w(t7, t5);
+  __m128i s7 = __lsx_vilvh_w(t7, t5);
   
-  kernel.packet[0] = __lsx_vilvl_d(s0, s4);
-  kernel.packet[1] = __lsx_vilvh_d(s0, s4);
-  kernel.packet[2] = __lsx_vilvl_d(s1, s5);
-  kernel.packet[3] = __lsx_vilvh_d(s1, s5);
-  kernel.packet[4] = __lsx_vilvl_d(s2, s6);
-  kernel.packet[5] = __lsx_vilvh_d(s2, s6);
-  kernel.packet[6] = __lsx_vilvl_d(s3, s7);
-  kernel.packet[7] = __lsx_vilvh_d(s3, s7);
+  kernel.packet[0] = __lsx_vilvl_d(s4, s0);
+  kernel.packet[1] = __lsx_vilvh_d(s4, s0);
+  kernel.packet[2] = __lsx_vilvl_d(s5, s1);
+  kernel.packet[3] = __lsx_vilvh_d(s5, s1);
+  kernel.packet[4] = __lsx_vilvl_d(s6, s2);
+  kernel.packet[5] = __lsx_vilvh_d(s6, s2);
+  kernel.packet[6] = __lsx_vilvl_d(s7, s3);
+  kernel.packet[7] = __lsx_vilvh_d(s7, s3);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet8s, 4>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_h(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_h(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_h(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_h(kernel.packet[2], kernel.packet[3]);
+  __m128i t0 = __lsx_vilvl_h(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_h(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_h(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_h(kernel.packet[3], kernel.packet[2]);
 
-  kernel.packet[0] = __lsx_vilvl_w(t0, t2);
-  kernel.packet[1] = __lsx_vilvh_w(t0, t2);
-  kernel.packet[2] = __lsx_vilvl_w(t1, t3);
-  kernel.packet[3] = __lsx_vilvh_w(t1, t3);
+  kernel.packet[0] = __lsx_vilvl_w(t2, t0);
+  kernel.packet[1] = __lsx_vilvh_w(t2, t0);
+  kernel.packet[2] = __lsx_vilvl_w(t3, t1);
+  kernel.packet[3] = __lsx_vilvh_w(t3, t1);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet4i, 4>& kernel)
 {
-  __m128i T0 = __lsx_vilvl_w(kernel.packet[0], kernel.packet[1]);
-  __m128i T1 = __lsx_vilvl_w(kernel.packet[2], kernel.packet[3]);
-  __m128i T2 = __lsx_vilvh_w(kernel.packet[2], kernel.packet[3]);
-  __m128i T3 = __lsx_vilvh_w(kernel.packet[2], kernel.packet[3]);
+  __m128i T0 = __lsx_vilvl_w(kernel.packet[1], kernel.packet[0]);
+  __m128i T1 = __lsx_vilvh_w(kernel.packet[1], kernel.packet[0]);
+  __m128i T2 = __lsx_vilvl_w(kernel.packet[3], kernel.packet[2]);
+  __m128i T3 = __lsx_vilvh_w(kernel.packet[3], kernel.packet[2]);
 
-  kernel.packet[0] = __lsx_vilvl_d(T0, T1);
-  kernel.packet[1] = __lsx_vilvh_d(T0, T1);
-  kernel.packet[2] = __lsx_vilvl_d(T2, T3);
-  kernel.packet[3] = __lsx_vilvh_d(T2, T3);
+  kernel.packet[0] = __lsx_vilvl_d(T2, T0);
+  kernel.packet[1] = __lsx_vilvh_d(T2, T0);
+  kernel.packet[2] = __lsx_vilvl_d(T3, T1);
+  kernel.packet[3] = __lsx_vilvh_d(T3, T1);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet2l, 2>& kernel)
 {
-  __m128i tmp = __lsx_vilvh_d(kernel.packet[0], kernel.packet[1]);
-  kernel.packet[0] = __lsx_vilvl_d(kernel.packet[0], kernel.packet[1]);
+  __m128i tmp = __lsx_vilvh_d(kernel.packet[1], kernel.packet[0]);
+  kernel.packet[0] = __lsx_vilvl_d(kernel.packet[1], kernel.packet[0]);
   kernel.packet[1] = tmp;
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet16uc, 16>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t4 = __lsx_vilvl_b(kernel.packet[4], kernel.packet[5]);
-  __m128i t5 = __lsx_vilvh_b(kernel.packet[4], kernel.packet[5]);
-  __m128i t6 = __lsx_vilvl_b(kernel.packet[6], kernel.packet[7]);
-  __m128i t7 = __lsx_vilvh_b(kernel.packet[6], kernel.packet[7]);
-  __m128i t8 = __lsx_vilvl_b(kernel.packet[8], kernel.packet[9]);
-  __m128i t9 = __lsx_vilvh_b(kernel.packet[8], kernel.packet[9]);
-  __m128i ta = __lsx_vilvl_b(kernel.packet[10], kernel.packet[11]);
-  __m128i tb = __lsx_vilvh_b(kernel.packet[10], kernel.packet[11]);
-  __m128i tc = __lsx_vilvl_b(kernel.packet[12], kernel.packet[13]);
-  __m128i td = __lsx_vilvh_b(kernel.packet[12], kernel.packet[13]);
-  __m128i te = __lsx_vilvl_b(kernel.packet[14], kernel.packet[15]);
-  __m128i tf = __lsx_vilvh_b(kernel.packet[14], kernel.packet[15]);
+  __m128i t0 = __lsx_vilvl_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t4 = __lsx_vilvl_b(kernel.packet[5], kernel.packet[4]);
+  __m128i t5 = __lsx_vilvh_b(kernel.packet[5], kernel.packet[4]);
+  __m128i t6 = __lsx_vilvl_b(kernel.packet[7], kernel.packet[6]);
+  __m128i t7 = __lsx_vilvh_b(kernel.packet[7], kernel.packet[6]);
+  __m128i t8 = __lsx_vilvl_b(kernel.packet[9], kernel.packet[8]);
+  __m128i t9 = __lsx_vilvh_b(kernel.packet[9], kernel.packet[8]);
+  __m128i ta = __lsx_vilvl_b(kernel.packet[11], kernel.packet[10]);
+  __m128i tb = __lsx_vilvh_b(kernel.packet[11], kernel.packet[10]);
+  __m128i tc = __lsx_vilvl_b(kernel.packet[13], kernel.packet[12]);
+  __m128i td = __lsx_vilvh_b(kernel.packet[13], kernel.packet[12]);
+  __m128i te = __lsx_vilvl_b(kernel.packet[15], kernel.packet[14]);
+  __m128i tf = __lsx_vilvh_b(kernel.packet[15], kernel.packet[14]);
 
-  __m128i s0 = __lsx_vilvl_h(t0, t2);
-  __m128i s1 = __lsx_vilvh_h(t0, t2);
-  __m128i s2 = __lsx_vilvl_h(t1, t3);
-  __m128i s3 = __lsx_vilvh_h(t1, t3);
-  __m128i s4 = __lsx_vilvl_h(t4, t6);
-  __m128i s5 = __lsx_vilvh_h(t4, t6);
-  __m128i s6 = __lsx_vilvl_h(t5, t7);
-  __m128i s7 = __lsx_vilvh_h(t5, t7);
-  __m128i s8 = __lsx_vilvl_h(t8, ta);
-  __m128i s9 = __lsx_vilvh_h(t8, ta);
-  __m128i sa = __lsx_vilvl_h(t9, tb);
-  __m128i sb = __lsx_vilvh_h(t9, tb);
-  __m128i sc = __lsx_vilvl_h(tc, te);
-  __m128i sd = __lsx_vilvh_h(tc, te);
-  __m128i se = __lsx_vilvl_h(td, tf);
-  __m128i sf = __lsx_vilvh_h(td, tf);
+  __m128i s0 = __lsx_vilvl_h(t2, t0);
+  __m128i s1 = __lsx_vilvh_h(t2, t0);
+  __m128i s2 = __lsx_vilvl_h(t3, t1);
+  __m128i s3 = __lsx_vilvh_h(t3, t1);
+  __m128i s4 = __lsx_vilvl_h(t6, t4);
+  __m128i s5 = __lsx_vilvh_h(t6, t4);
+  __m128i s6 = __lsx_vilvl_h(t7, t5);
+  __m128i s7 = __lsx_vilvh_h(t7, t5);
+  __m128i s8 = __lsx_vilvl_h(ta, t8);
+  __m128i s9 = __lsx_vilvh_h(ta, t8);
+  __m128i sa = __lsx_vilvl_h(tb, t9);
+  __m128i sb = __lsx_vilvh_h(tb, t9);
+  __m128i sc = __lsx_vilvl_h(te, tc);
+  __m128i sd = __lsx_vilvh_h(te, tc);
+  __m128i se = __lsx_vilvl_h(tf, td);
+  __m128i sf = __lsx_vilvh_h(tf, td);
 
-  __m128i u0 = __lsx_vilvl_w(s0, s4);
-  __m128i u1 = __lsx_vilvh_w(s0, s4);
-  __m128i u2 = __lsx_vilvl_w(s1, s5);
-  __m128i u3 = __lsx_vilvh_w(s1, s5);
-  __m128i u4 = __lsx_vilvl_w(s2, s6);
-  __m128i u5 = __lsx_vilvh_w(s2, s6);
-  __m128i u6 = __lsx_vilvl_w(s3, s7);
-  __m128i u7 = __lsx_vilvh_w(s3, s7);
-  __m128i u8 = __lsx_vilvl_w(s8, sc);
-  __m128i u9 = __lsx_vilvh_w(s8, sc);
-  __m128i ua = __lsx_vilvl_w(s9, sd);
-  __m128i ub = __lsx_vilvh_w(s9, sd);
-  __m128i uc = __lsx_vilvl_w(sa, se);
-  __m128i ud = __lsx_vilvh_w(sa, se);
-  __m128i ue = __lsx_vilvl_w(sb, sf);
-  __m128i uf = __lsx_vilvh_w(sb, sf);
+  __m128i u0 = __lsx_vilvl_w(s4, s0);
+  __m128i u1 = __lsx_vilvh_w(s4, s0);
+  __m128i u2 = __lsx_vilvl_w(s5, s1);
+  __m128i u3 = __lsx_vilvh_w(s5, s1);
+  __m128i u4 = __lsx_vilvl_w(s6, s2);
+  __m128i u5 = __lsx_vilvh_w(s6, s2);
+  __m128i u6 = __lsx_vilvl_w(s7, s3);
+  __m128i u7 = __lsx_vilvh_w(s7, s3);
+  __m128i u8 = __lsx_vilvl_w(sc, s8);
+  __m128i u9 = __lsx_vilvh_w(sc, s8);
+  __m128i ua = __lsx_vilvl_w(sd, s9);
+  __m128i ub = __lsx_vilvh_w(sd, s9);
+  __m128i uc = __lsx_vilvl_w(se, sa);
+  __m128i ud = __lsx_vilvh_w(se, sa);
+  __m128i ue = __lsx_vilvl_w(sf, sb);
+  __m128i uf = __lsx_vilvh_w(sf, sb);
 
-  kernel.packet[0] = __lsx_vilvl_d(u0, u8);
-  kernel.packet[1] = __lsx_vilvh_d(u0, u8);
-  kernel.packet[2] = __lsx_vilvl_d(u1, u9);
-  kernel.packet[3] = __lsx_vilvh_d(u1, u9);
-  kernel.packet[4] = __lsx_vilvl_d(u2, ua);
-  kernel.packet[5] = __lsx_vilvh_d(u2, ua);
-  kernel.packet[6] = __lsx_vilvl_d(u3, ub);
-  kernel.packet[7] = __lsx_vilvh_d(u3, ub);
-  kernel.packet[8] = __lsx_vilvl_d(u4, uc);
-  kernel.packet[9] = __lsx_vilvh_d(u4, uc);
-  kernel.packet[10] = __lsx_vilvl_d(u5, ud);
-  kernel.packet[11] = __lsx_vilvh_d(u5, ud);
-  kernel.packet[12] = __lsx_vilvl_d(u6, ue);
-  kernel.packet[13] = __lsx_vilvh_d(u6, ue);
-  kernel.packet[14] = __lsx_vilvl_d(u7, uf);
-  kernel.packet[15] = __lsx_vilvh_d(u7, uf);
+  kernel.packet[0] = __lsx_vilvl_d(u8, u0);
+  kernel.packet[1] = __lsx_vilvh_d(u8, u0);
+  kernel.packet[2] = __lsx_vilvl_d(u9, u1);
+  kernel.packet[3] = __lsx_vilvh_d(u9, u1);
+  kernel.packet[4] = __lsx_vilvl_d(ua, u2);
+  kernel.packet[5] = __lsx_vilvh_d(ua, u2);
+  kernel.packet[6] = __lsx_vilvl_d(ub, u3);
+  kernel.packet[7] = __lsx_vilvh_d(ub, u3);
+  kernel.packet[8] = __lsx_vilvl_d(uc, u4);
+  kernel.packet[9] = __lsx_vilvh_d(uc, u4);
+  kernel.packet[10] = __lsx_vilvl_d(ud, u5);
+  kernel.packet[11] = __lsx_vilvh_d(ud, u5);
+  kernel.packet[12] = __lsx_vilvl_d(ue, u6);
+  kernel.packet[13] = __lsx_vilvh_d(ue, u6);
+  kernel.packet[14] = __lsx_vilvl_d(uf, u7);
+  kernel.packet[15] = __lsx_vilvh_d(uf, u7);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet16uc, 8>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t4 = __lsx_vilvl_b(kernel.packet[4], kernel.packet[5]);
-  __m128i t5 = __lsx_vilvh_b(kernel.packet[4], kernel.packet[5]);
-  __m128i t6 = __lsx_vilvl_b(kernel.packet[6], kernel.packet[7]);
-  __m128i t7 = __lsx_vilvh_b(kernel.packet[6], kernel.packet[7]);
+  __m128i t0 = __lsx_vilvl_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t4 = __lsx_vilvl_b(kernel.packet[5], kernel.packet[4]);
+  __m128i t5 = __lsx_vilvh_b(kernel.packet[5], kernel.packet[4]);
+  __m128i t6 = __lsx_vilvl_b(kernel.packet[7], kernel.packet[6]);
+  __m128i t7 = __lsx_vilvh_b(kernel.packet[7], kernel.packet[6]);
   
-  __m128i s0 = __lsx_vilvl_h(t0, t2);
-  __m128i s1 = __lsx_vilvh_h(t0, t2);
-  __m128i s2 = __lsx_vilvl_h(t1, t3);
-  __m128i s3 = __lsx_vilvh_h(t1, t3);
-  __m128i s4 = __lsx_vilvl_h(t4, t6);
-  __m128i s5 = __lsx_vilvh_h(t4, t6);
-  __m128i s6 = __lsx_vilvl_h(t5, t7);
-  __m128i s7 = __lsx_vilvh_h(t5, t7);
+  __m128i s0 = __lsx_vilvl_h(t2, t0);
+  __m128i s1 = __lsx_vilvh_h(t2, t0);
+  __m128i s2 = __lsx_vilvl_h(t3, t1);
+  __m128i s3 = __lsx_vilvh_h(t3, t1);
+  __m128i s4 = __lsx_vilvl_h(t6, t4);
+  __m128i s5 = __lsx_vilvh_h(t6, t4);
+  __m128i s6 = __lsx_vilvl_h(t7, t5);
+  __m128i s7 = __lsx_vilvh_h(t7, t5);
   
-  kernel.packet[0] = __lsx_vilvl_w(s0, s4);
-  kernel.packet[1] = __lsx_vilvh_w(s0, s4);
-  kernel.packet[2] = __lsx_vilvl_w(s1, s5);
-  kernel.packet[3] = __lsx_vilvh_w(s1, s5);
-  kernel.packet[4] = __lsx_vilvl_w(s2, s6);
-  kernel.packet[5] = __lsx_vilvh_w(s2, s6);
-  kernel.packet[6] = __lsx_vilvl_w(s3, s7);
-  kernel.packet[7] = __lsx_vilvh_w(s3, s7);
+  kernel.packet[0] = __lsx_vilvl_w(s4, s0);
+  kernel.packet[1] = __lsx_vilvh_w(s4, s0);
+  kernel.packet[2] = __lsx_vilvl_w(s5, s1);
+  kernel.packet[3] = __lsx_vilvh_w(s5, s1);
+  kernel.packet[4] = __lsx_vilvl_w(s6, s2);
+  kernel.packet[5] = __lsx_vilvh_w(s6, s2);
+  kernel.packet[6] = __lsx_vilvl_w(s7, s3);
+  kernel.packet[7] = __lsx_vilvh_w(s7, s3);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet16uc, 4>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_b(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_b(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_b(kernel.packet[2], kernel.packet[3]);
+  __m128i t0 = __lsx_vilvl_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_b(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_b(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_b(kernel.packet[3], kernel.packet[2]);
   
-  kernel.packet[0] = __lsx_vilvl_h(t0, t2);
-  kernel.packet[1] = __lsx_vilvh_h(t0, t2);
-  kernel.packet[2] = __lsx_vilvl_h(t1, t3);
-  kernel.packet[3] = __lsx_vilvh_h(t1, t3);
+  kernel.packet[0] = __lsx_vilvl_h(t2, t0);
+  kernel.packet[1] = __lsx_vilvh_h(t2, t0);
+  kernel.packet[2] = __lsx_vilvl_h(t3, t1);
+  kernel.packet[3] = __lsx_vilvh_h(t3, t1);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet8us, 8>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_h(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_h(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_h(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_h(kernel.packet[2], kernel.packet[3]);
-  __m128i t4 = __lsx_vilvl_h(kernel.packet[4], kernel.packet[5]);
-  __m128i t5 = __lsx_vilvh_h(kernel.packet[4], kernel.packet[5]);
-  __m128i t6 = __lsx_vilvl_h(kernel.packet[6], kernel.packet[7]);
-  __m128i t7 = __lsx_vilvh_h(kernel.packet[6], kernel.packet[7]);
+  __m128i t0 = __lsx_vilvl_h(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_h(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_h(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_h(kernel.packet[3], kernel.packet[2]);
+  __m128i t4 = __lsx_vilvl_h(kernel.packet[5], kernel.packet[4]);
+  __m128i t5 = __lsx_vilvh_h(kernel.packet[5], kernel.packet[4]);
+  __m128i t6 = __lsx_vilvl_h(kernel.packet[7], kernel.packet[6]);
+  __m128i t7 = __lsx_vilvh_h(kernel.packet[7], kernel.packet[6]);
 
-  __m128i s0 = __lsx_vilvl_w(t0, t2);
-  __m128i s1 = __lsx_vilvh_w(t0, t2);
-  __m128i s2 = __lsx_vilvl_w(t1, t3);
-  __m128i s3 = __lsx_vilvh_w(t1, t3);
-  __m128i s4 = __lsx_vilvl_w(t4, t6);
-  __m128i s5 = __lsx_vilvh_w(t4, t6);
-  __m128i s6 = __lsx_vilvl_w(t5, t7);
-  __m128i s7 = __lsx_vilvh_w(t5, t7);
+  __m128i s0 = __lsx_vilvl_w(t2, t0);
+  __m128i s1 = __lsx_vilvh_w(t2, t0);
+  __m128i s2 = __lsx_vilvl_w(t3, t1);
+  __m128i s3 = __lsx_vilvh_w(t3, t1);
+  __m128i s4 = __lsx_vilvl_w(t6, t4);
+  __m128i s5 = __lsx_vilvh_w(t6, t4);
+  __m128i s6 = __lsx_vilvl_w(t7, t5);
+  __m128i s7 = __lsx_vilvh_w(t7, t5);
   
-  kernel.packet[0] = __lsx_vilvl_d(s0, s4);
-  kernel.packet[1] = __lsx_vilvh_d(s0, s4);
-  kernel.packet[2] = __lsx_vilvl_d(s1, s5);
-  kernel.packet[3] = __lsx_vilvh_d(s1, s5);
-  kernel.packet[4] = __lsx_vilvl_d(s2, s6);
-  kernel.packet[5] = __lsx_vilvh_d(s2, s6);
-  kernel.packet[6] = __lsx_vilvl_d(s3, s7);
-  kernel.packet[7] = __lsx_vilvh_d(s3, s7);
+  kernel.packet[0] = __lsx_vilvl_d(s4, s0);
+  kernel.packet[1] = __lsx_vilvh_d(s4, s0);
+  kernel.packet[2] = __lsx_vilvl_d(s5, s1);
+  kernel.packet[3] = __lsx_vilvh_d(s5, s1);
+  kernel.packet[4] = __lsx_vilvl_d(s6, s2);
+  kernel.packet[5] = __lsx_vilvh_d(s6, s2);
+  kernel.packet[6] = __lsx_vilvl_d(s7, s3);
+  kernel.packet[7] = __lsx_vilvh_d(s7, s3);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet8us, 4>& kernel)
 {
-  __m128i t0 = __lsx_vilvl_h(kernel.packet[0], kernel.packet[1]);
-  __m128i t1 = __lsx_vilvh_h(kernel.packet[0], kernel.packet[1]);
-  __m128i t2 = __lsx_vilvl_h(kernel.packet[2], kernel.packet[3]);
-  __m128i t3 = __lsx_vilvh_h(kernel.packet[2], kernel.packet[3]);
+  __m128i t0 = __lsx_vilvl_h(kernel.packet[1], kernel.packet[0]);
+  __m128i t1 = __lsx_vilvh_h(kernel.packet[1], kernel.packet[0]);
+  __m128i t2 = __lsx_vilvl_h(kernel.packet[3], kernel.packet[2]);
+  __m128i t3 = __lsx_vilvh_h(kernel.packet[3], kernel.packet[2]);
 
-  kernel.packet[0] = __lsx_vilvl_w(t0, t2);
-  kernel.packet[1] = __lsx_vilvh_w(t0, t2);
-  kernel.packet[2] = __lsx_vilvl_w(t1, t3);
-  kernel.packet[3] = __lsx_vilvh_w(t1, t3);
+  kernel.packet[0] = __lsx_vilvl_w(t2, t0);
+  kernel.packet[1] = __lsx_vilvh_w(t2, t0);
+  kernel.packet[2] = __lsx_vilvl_w(t3, t1);
+  kernel.packet[3] = __lsx_vilvh_w(t3, t1);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet4ui, 4>& kernel)
 {
-  __m128i T0 = __lsx_vilvl_w(kernel.packet[0], kernel.packet[1]);
-  __m128i T1 = __lsx_vilvl_w(kernel.packet[2], kernel.packet[3]);
-  __m128i T2 = __lsx_vilvh_w(kernel.packet[2], kernel.packet[3]);
-  __m128i T3 = __lsx_vilvh_w(kernel.packet[2], kernel.packet[3]);
+  __m128i T0 = __lsx_vilvl_w(kernel.packet[1], kernel.packet[0]);
+  __m128i T1 = __lsx_vilvh_w(kernel.packet[1], kernel.packet[0]);
+  __m128i T2 = __lsx_vilvl_w(kernel.packet[3], kernel.packet[2]);
+  __m128i T3 = __lsx_vilvh_w(kernel.packet[3], kernel.packet[2]);
 
-  kernel.packet[0] = __lsx_vilvl_d(T0, T1);
-  kernel.packet[1] = __lsx_vilvh_d(T0, T1);
-  kernel.packet[2] = __lsx_vilvl_d(T2, T3);
-  kernel.packet[3] = __lsx_vilvh_d(T2, T3);
+  kernel.packet[0] = __lsx_vilvl_d(T2, T0);
+  kernel.packet[1] = __lsx_vilvh_d(T2, T0);
+  kernel.packet[2] = __lsx_vilvl_d(T3, T1);
+  kernel.packet[3] = __lsx_vilvh_d(T3, T1);
 }
 EIGEN_DEVICE_FUNC inline void ptranspose(PacketBlock<Packet2ul, 2>& kernel)
 {
-  __m128i tmp = __lsx_vilvh_d(kernel.packet[0], kernel.packet[1]);
-  kernel.packet[0] = __lsx_vilvl_d(kernel.packet[0], kernel.packet[1]);
+  __m128i tmp = __lsx_vilvh_d(kernel.packet[1], kernel.packet[0]);
+  kernel.packet[0] = __lsx_vilvl_d(kernel.packet[1], kernel.packet[0]);
   kernel.packet[1] = tmp;
 }
 
@@ -1886,7 +1715,64 @@ template<> EIGEN_STRONG_INLINE Packet4f pceil(const Packet4f& a) { return __lsx_
 template<> EIGEN_STRONG_INLINE Packet2d pceil(const Packet2d& a) { return __lsx_vfrintrp_d(a); }
 
 template<> EIGEN_STRONG_INLINE Packet4f pround(const Packet4f& a) { return __lsx_vfrint_s(a); }
-template<> EIGEN_STRONG_INLINE Packet2d pround(const Packet2d& a) { return __lsx_vfrint_d(a); }
+
+template<> EIGEN_DEVICE_FUNC inline Packet4f pselect(const Packet4f& mask, const Packet4f& a, const Packet4f& b) { return (Packet4f)__lsx_vbitsel_v((__m128i)b, (__m128i)a, (__m128i)mask); }
+template<> EIGEN_DEVICE_FUNC inline Packet16c pselect(const Packet16c& mask, const Packet16c& a, const Packet16c& b) { return (Packet16c)__lsx_vbitsel_v((__m128i)b, (__m128i)a, (__m128i)mask); }
+
+template<> EIGEN_STRONG_INLINE Packet16c ploadquad<Packet16c>(const int8_t* from)
+{
+  int8_t tmp[16] = {*from, *from, *from, *from,
+                   *(from+1), *(from+1), *(from+1), *(from+1),
+                   *(from+2), *(from+2), *(from+2), *(from+2),
+                   *(from+3), *(from+3), *(from+3), *(from+3)};
+  return __lsx_vld(tmp, 0);
+}
+template<> EIGEN_STRONG_INLINE Packet16uc ploadquad<Packet16uc>(const uint8_t* from)
+{
+  uint8_t tmp[16] = {*from, *from, *from, *from,
+                   *(from+1), *(from+1), *(from+1), *(from+1),
+                   *(from+2), *(from+2), *(from+2), *(from+2),
+                   *(from+3), *(from+3), *(from+3), *(from+3)};
+  return __lsx_vld(tmp, 0);
+}
+template<> EIGEN_STRONG_INLINE Packet8s ploadquad<Packet8s>(const int16_t* from)
+{
+  int16_t tmp[8] = {*from, *from, *from, *from,
+                   *(from+1), *(from+1), *(from+1), *(from+1)};
+  return __lsx_vld(tmp, 0);
+}
+template<> EIGEN_STRONG_INLINE Packet8us ploadquad<Packet8us>(const uint16_t* from)
+{
+  uint16_t tmp[8] = {*from, *from, *from, *from,
+                   *(from+1), *(from+1), *(from+1), *(from+1)};
+  return __lsx_vld(tmp, 0);
+}
+template<> EIGEN_STRONG_INLINE Packet4i ploadquad<Packet4i>(const int32_t* from)
+{
+  int32_t tmp[4] = {*from, *from, *from, *from};
+  return __lsx_vld(tmp, 0);
+}
+template<> EIGEN_STRONG_INLINE Packet4ui ploadquad<Packet4ui>(const uint32_t* from)
+{
+  uint32_t tmp[4] = {*from, *from, *from, *from};
+  return __lsx_vld(tmp, 0);
+}
+
+template<> EIGEN_STRONG_INLINE Packet16c pnmsub(const Packet16c& a, const Packet16c& b, const Packet16c& c) { return __lsx_vmsub_b(pnegate(c), a, b); }
+template<> EIGEN_STRONG_INLINE Packet8s pnmsub(const Packet8s& a, const Packet8s& b, const Packet8s& c) { return __lsx_vmsub_h(pnegate(c), a, b); }
+template<> EIGEN_STRONG_INLINE Packet4i pnmsub(const Packet4i& a, const Packet4i& b, const Packet4i& c) { return __lsx_vmsub_w(pnegate(c), a, b); }
+template<> EIGEN_STRONG_INLINE Packet2l pnmsub(const Packet2l& a, const Packet2l& b, const Packet2l& c) { return __lsx_vmsub_d(pnegate(c), a, b); }
+
+template<> EIGEN_STRONG_INLINE Packet16c pmsub(const Packet16c& a, const Packet16c& b, const Packet16c& c) { return __lsx_vmadd_b(pnegate(c), a, b); }
+template<> EIGEN_STRONG_INLINE Packet8s pmsub(const Packet8s& a, const Packet8s& b, const Packet8s& c) { return __lsx_vmadd_h(pnegate(c), a, b); }
+template<> EIGEN_STRONG_INLINE Packet4i pmsub(const Packet4i& a, const Packet4i& b, const Packet4i& c) { return __lsx_vmadd_w(pnegate(c), a, b); }
+template<> EIGEN_STRONG_INLINE Packet2l pmsub(const Packet2l& a, const Packet2l& b, const Packet2l& c) { return __lsx_vmadd_d(pnegate(c), a, b); }
+
+template<> EIGEN_STRONG_INLINE Packet16c pnmadd(const Packet16c& a, const Packet16c& b, const Packet16c& c) { return __lsx_vmsub_b(c, a, b); }
+template<> EIGEN_STRONG_INLINE Packet8s pnmadd(const Packet8s& a, const Packet8s& b, const Packet8s& c) { return __lsx_vmsub_h(c, a, b); }
+template<> EIGEN_STRONG_INLINE Packet4i pnmadd(const Packet4i& a, const Packet4i& b, const Packet4i& c) { return __lsx_vmsub_w(c, a, b); }
+template<> EIGEN_STRONG_INLINE Packet2l pnmadd(const Packet2l& a, const Packet2l& b, const Packet2l& c) { return __lsx_vmsub_d(c, a, b); }
+
 } //internal
 } //Eigen
 #endif
