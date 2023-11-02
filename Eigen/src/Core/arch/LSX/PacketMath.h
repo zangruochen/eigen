@@ -309,6 +309,7 @@ struct packet_traits<float> : default_packet_traits
     HasBlend     = 0,
     HasSign      = 0,
     HasDiv       = 1,
+    HasExp       = 1,
     HasFloor     = 1,
     HasCeil      = 1,
     HasRound     = 1,
@@ -477,8 +478,8 @@ template<> EIGEN_STRONG_INLINE Packet2d pset1<Packet2d>(const double& from) {
   return v;
 }
 
-template<> EIGEN_STRONG_INLINE Packet4f pset1frombits<Packet4f>(uint32_t from) { return __lsx_vffint_s_wu(pset1<Packet4ui>(from)); }
-template<> EIGEN_STRONG_INLINE Packet2d pset1frombits<Packet2d>(uint64_t from) { return __lsx_vffint_d_lu(pset1<Packet2ul>(from)); }
+template<> EIGEN_STRONG_INLINE Packet4f pset1frombits<Packet4f>(uint32_t from) { return reinterpret_cast<__m128>((__m128i)pset1<Packet4ui>(from)); }
+template<> EIGEN_STRONG_INLINE Packet2d pset1frombits<Packet2d>(uint64_t from) { return reinterpret_cast<__m128d>((__m128i)pset1<Packet2ul>(from)); }
 
 template<> EIGEN_STRONG_INLINE Packet16c plset<Packet16c>(const int8_t& a)
 {
@@ -745,32 +746,32 @@ template<> EIGEN_STRONG_INLINE Packet2d pmax<Packet2d>(const Packet2d& a, const 
   return (Packet2d)__lsx_vbitsel_v((__m128i)b, (__m128i)a, aMaxOrNaN);
 }
 
-template<int N> EIGEN_STRONG_INLINE Packet16c parithmetic_shift_right(const Packet16c& a) { return __lsx_vsrai_b(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet8s parithmetic_shift_right(const Packet8s& a) { return __lsx_vsrai_h(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet4i parithmetic_shift_right(const Packet4i& a) { return __lsx_vsrai_w(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet2l parithmetic_shift_right(const Packet2l& a) { return __lsx_vsrai_d(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet16uc parithmetic_shift_right(const Packet16uc& a) { return __lsx_vsrli_b(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet8us parithmetic_shift_right(const Packet8us& a) { return __lsx_vsrli_h(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet4ui parithmetic_shift_right(const Packet4ui& a) { return __lsx_vsrli_w(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet2ul parithmetic_shift_right(const Packet2ul& a) { return __lsx_vsrli_d(a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet16c parithmetic_shift_right(const Packet16c& a) { return __lsx_vsrai_b((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet8s parithmetic_shift_right(const Packet8s& a) { return __lsx_vsrai_h((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet4i parithmetic_shift_right(const Packet4i& a) { return __lsx_vsrai_w((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet2l parithmetic_shift_right(const Packet2l& a) { return __lsx_vsrai_d((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet16uc parithmetic_shift_right(const Packet16uc& a) { return __lsx_vsrli_b((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet8us parithmetic_shift_right(const Packet8us& a) { return __lsx_vsrli_h((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet4ui parithmetic_shift_right(const Packet4ui& a) { return __lsx_vsrli_w((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet2ul parithmetic_shift_right(const Packet2ul& a) { return __lsx_vsrli_d((__m128i)a, N); }
 
-template<int N> EIGEN_STRONG_INLINE Packet16c plogical_shift_right(const Packet16c& a) { return __lsx_vsrli_b(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet8s plogical_shift_right(const Packet8s& a) { return __lsx_vsrli_h(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet4i plogical_shift_right(const Packet4i& a) { return __lsx_vsrli_w(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet2l plogical_shift_right(const Packet2l& a) { return __lsx_vsrli_d(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet16uc plogical_shift_right(const Packet16uc& a) { return __lsx_vsrli_b(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet8us plogical_shift_right(const Packet8us& a) { return __lsx_vsrli_h(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet4ui plogical_shift_right(const Packet4ui& a) { return __lsx_vsrli_w(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet2ul plogical_shift_right(const Packet2ul& a) { return __lsx_vsrli_d(a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet16c plogical_shift_right(const Packet16c& a) { return __lsx_vsrli_b((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet8s plogical_shift_right(const Packet8s& a) { return __lsx_vsrli_h((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet4i plogical_shift_right(const Packet4i& a) { return __lsx_vsrli_w((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet2l plogical_shift_right(const Packet2l& a) { return __lsx_vsrli_d((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet16uc plogical_shift_right(const Packet16uc& a) { return __lsx_vsrli_b((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet8us plogical_shift_right(const Packet8us& a) { return __lsx_vsrli_h((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet4ui plogical_shift_right(const Packet4ui& a) { return __lsx_vsrli_w((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet2ul plogical_shift_right(const Packet2ul& a) { return __lsx_vsrli_d((__m128i)a, N); }
 
-template<int N> EIGEN_STRONG_INLINE Packet16c plogical_shift_left(const Packet16c& a) { return __lsx_vslli_b(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet8s plogical_shift_left(const Packet8s& a) { return __lsx_vslli_h(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet4i plogical_shift_left(const Packet4i& a) { return __lsx_vslli_w(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet2l plogical_shift_left(const Packet2l& a) { return __lsx_vslli_d(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet16uc plogical_shift_left(const Packet16uc& a) { return __lsx_vslli_b(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet8us plogical_shift_left(const Packet8us& a) { return __lsx_vslli_h(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet4ui plogical_shift_left(const Packet4ui& a) { return __lsx_vslli_w(a, N); }
-template<int N> EIGEN_STRONG_INLINE Packet2ul plogical_shift_left(const Packet2ul& a) { return __lsx_vslli_d(a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet16c plogical_shift_left(const Packet16c& a) { return __lsx_vslli_b((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet8s plogical_shift_left(const Packet8s& a) { return __lsx_vslli_h((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet4i plogical_shift_left(const Packet4i& a) { return __lsx_vslli_w((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet2l plogical_shift_left(const Packet2l& a) { return __lsx_vslli_d((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet16uc plogical_shift_left(const Packet16uc& a) { return __lsx_vslli_b((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet8us plogical_shift_left(const Packet8us& a) { return __lsx_vslli_h((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet4ui plogical_shift_left(const Packet4ui& a) { return __lsx_vslli_w((__m128i)a, N); }
+template<int N> EIGEN_STRONG_INLINE Packet2ul plogical_shift_left(const Packet2ul& a) { return __lsx_vslli_d((__m128i)a, N); }
 
 template<> EIGEN_STRONG_INLINE Packet4f pabs(const Packet4f& a) { return (Packet4f)__lsx_vbitclri_w((__m128i)a, 31); }
 template<> EIGEN_STRONG_INLINE Packet2d pabs(const Packet2d& a) { return (Packet2d)__lsx_vbitclri_d((__m128i)a, 63); }
@@ -1772,6 +1773,14 @@ template<> EIGEN_STRONG_INLINE Packet16c pnmadd(const Packet16c& a, const Packet
 template<> EIGEN_STRONG_INLINE Packet8s pnmadd(const Packet8s& a, const Packet8s& b, const Packet8s& c) { return __lsx_vmsub_h(c, a, b); }
 template<> EIGEN_STRONG_INLINE Packet4i pnmadd(const Packet4i& a, const Packet4i& b, const Packet4i& c) { return __lsx_vmsub_w(c, a, b); }
 template<> EIGEN_STRONG_INLINE Packet2l pnmadd(const Packet2l& a, const Packet2l& b, const Packet2l& c) { return __lsx_vmsub_d(c, a, b); }
+
+template<> EIGEN_STRONG_INLINE Packet4f pexp(const Packet4f& _x) { return pexp_float(_x); }
+
+template<> EIGEN_STRONG_INLINE Packet4f pldexp<Packet4f>(const Packet4f& a, const Packet4f& exponent) {
+  return pldexp_generic(a,exponent);
+}
+
+template<> EIGEN_STRONG_INLINE Packet4f pfrexp<Packet4f>(const Packet4f& a, Packet4f& exponent) { return pfrexp_generic(a, exponent); }
 
 } //internal
 } //Eigen

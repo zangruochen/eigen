@@ -419,7 +419,7 @@
 #include <msa.h>
 #endif
 
-#elif (defined __loongarch64 && defined __loongarch_simd)
+#elif (defined __loongarch64 && defined __loongarch_sx)
 
 #define EIGEN_VECTORIZE
 #define EIGEN_VECTORIZE_LSX
